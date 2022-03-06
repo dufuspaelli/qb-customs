@@ -685,7 +685,7 @@ function ExitBennys()
 
     FreezeEntityPosition(plyVeh, false)
     SetEntityCollision(plyVeh, true, true)
-
+    SetUserRadioControlEnabled(true)
     SetTimeout(100, function()
         DestroyMenus()
     end)
@@ -736,6 +736,7 @@ function enterLocation(locationsPos)
 end
 
 
+
 function disableControls()
     DisableControlAction(1, 38, true) --Key: E
     DisableControlAction(1, 172, true) --Key: Up Arrow
@@ -745,16 +746,23 @@ function disableControls()
     DisableControlAction(1, 71, true) --Key: W (veh_accelerate)
     DisableControlAction(1, 72, true) --Key: S (veh_brake)
     DisableControlAction(1, 34, true) --Key: A
-    DisableControlAction(1, 35, true) --Key: D
+    DisableControlAction(1, 35, true) --Key: D3
     DisableControlAction(1, 75, true) --Key: F (veh_exit)
+    DisableControlAction(1, 14, true) --Key: F (veh_exit)
+    DisableControlAction(2, 50, true) --Key: F (veh_exit)
+    DisableControlAction(2, 51, true) --Key: F (veh_exit)
+    EnableControlAction(2, 91, 1)
+    local v = 330
 
-    if IsDisabledControlJustReleased(1, 172) then --Key: Arrow Up
+    SetUserRadioControlEnabled(false)
+    if IsDisabledControlJustReleased(1, 172) or IsDisabledControlJustPressed(2,96) then --Key: Arrow Up
         MenuScrollFunctionality("up")
         PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
     end
 
-    if IsDisabledControlJustReleased(1, 173) then --Key: Arrow Down
+    if IsDisabledControlJustReleased(1, 173) or IsDisabledControlJustPressed(2,97) or IsDisabledControlJustReleased(2, 333) then --Key: Arrow Down
         MenuScrollFunctionality("down")
+        print("down")
         PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
     end
 
@@ -797,6 +805,7 @@ CreateThread(function()
 					    TriggerEvent('event:control:bennys', k)
 					else
 					    QBCore.Functions.Notify("You are not authorized", "error")
+                        SetUserRadioControlEnabled(true)
 					end
 				end
                             end
