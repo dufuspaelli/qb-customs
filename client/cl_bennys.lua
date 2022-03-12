@@ -57,6 +57,7 @@ local function saveVehicle()
     local plyPed = PlayerPedId()
     local veh = GetVehiclePedIsIn(plyPed, false)
     local myCar = QBCore.Functions.GetVehicleProperties(veh)
+    TriggerEvent('persistent-vehicles/update-vehicle', veh)
     TriggerServerEvent('updateVehicle',myCar)
 end
 
