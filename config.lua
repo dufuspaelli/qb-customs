@@ -9,6 +9,19 @@ Config.allowGovPlateIndex = false -- Setting this to true will allow all vehicle
 maxVehiclePerformanceUpgrades = 0 -- | All Upgrades: 0 | No Upgrades: -1 | Can be -1 to 4
 vehicleBaseRepairCost = 600
 vehicleRepairCostMultiplier = 1
+moneyType = 'bank'
+
+-- Location Configs
+-- Add locations here
+-- Add jobs specific to the garage.
+bennyGarages = {
+    [1] = {coords = vector4(-211.55, -1324.55, 30.90, 319.73135375977), blip = true, useJob = false, job = {"mechanic", "police"}},
+    [2] = {coords = vector4(109.89, 6627.07, 31.78, 221.7938), blip = true, useJob = false, job = {"mechanic"}}
+}
+
+--[[ bennyLocations = {
+    vector4(-211.55, -1324.55, 30.90, 319.731)
+} ]]
 
 -- ADJUST PRICING
 vehicleCustomisationPrices = {
