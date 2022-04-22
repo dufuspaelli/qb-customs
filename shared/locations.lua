@@ -95,7 +95,7 @@ Config.Locations = {
         }
     },
 
-    ['Power'] = {
+--[[     ['Power'] = {
         settings = {
             label = 'Bennys Motorworks',
             welcomeLabel = "Welcome to Benny's Motorworks!",
@@ -134,7 +134,7 @@ Config.Locations = {
             { coords = vector3(-38.12, -1052.85, 28.4), length = 6.0, width = 4.0, heading = 340.0, minZ = 27.0, maxZ = 31.0 },
         }
     },
-
+ ]]
     ['Popular'] = {
         settings = {
             label = 'Customs Motorworks',
@@ -215,7 +215,7 @@ Config.Locations = {
         }
     },
 
-    ['Hayes'] = {
+  --[[   ['Hayes'] = {
         settings = {
             label = 'Hayes Motorworks',
             welcomeLabel = "Welcome to Hayes Motorworks!",
@@ -252,7 +252,7 @@ Config.Locations = {
             { coords = vector3(-1417.12, -445.98, 35.91), length = 6.0, width = 4.0, heading = 32.0, minZ = 35.0, maxZ = 39.0 },
             { coords = vector3(-1423.67, -450.03, 35.91), length = 6.0, width = 4.0, heading = 32.0, minZ = 35.0, maxZ = 39.0 },
         }
-    },
+    }, ]]
 
     ['Paleto'] = {
         settings = {
@@ -294,7 +294,7 @@ Config.Locations = {
         }
     },
 
-    ['Tunershop'] = {
+  --[[   ['Tunershop'] = {
         settings = {
             label = 'Tunershop',
             welcomeLabel = "Welcome to the Tunershop!",
@@ -335,8 +335,8 @@ Config.Locations = {
             { coords = vector3(135.92, -3030.5, 7.04), length = 6.0, width = 4.0, heading = 180.0, minZ = 6.0, maxZ = 10.0 },
         }
     },
-
-    ['MRPD'] = {
+ ]]
+  --[[   ['MRPD'] = {
         settings = {
             label = 'MRPD Motorworks',
             welcomeLabel = "Welcome to MRPD Motorworks!",
@@ -390,5 +390,5 @@ Config.Locations = {
             { coords = vector3(337.2, -579.6, 28.8), length = 9.4, width = 4.2, heading = 340.0, minZ = 27.5, maxZ = 31.5 },
             { coords = vector3(340.38, -570.8, 28.8), length = 8.8, width = 4.2, heading = 340.0, minZ = 27.5, maxZ = 31.5 },
         }
-    },
+    }, ]]
 }
